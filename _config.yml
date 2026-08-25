@@ -1,3 +1,14 @@
-theme: jekyll-theme-slate
-title: Gordan Zitkovic - homepage
-description: Gordan Zitkovic's academic page
+theme: jekyll-theme-minimal
+title: Gordan Žitković
+description: Academic homepage
+role: Professor
+department: Department of Mathematics
+department_url: https://math.utexas.edu/
+university: The University of Texas at Austin
+university_url: https://www.utexas.edu/
+office: PMA 11.132
+phone: +1 512 471 1159
+fax: +1 512 471 9038
+email: gordanz@math.utexas.edu
+cv_url: /assets/docs/cv.pdf
+lecture_notes_url: https://web.ma.utexas.edu/users/gordanz/lecture_notes_page.html

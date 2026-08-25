@@ -1,0 +1,282 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  color-scheme: light dark;
+  --accent: #762f40;
+  --accent-deep: #4f1f2b;
+  --background: #f7f5f0;
+  --text: #292a2e;
+  --muted: #66646a;
+  --border: #d2ccc1;
+  --soft-border: #e6e1d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 0.91rem;
+  line-height: 1.62;
+  margin: 0;
+  padding: 0;
+}
+
+.site-shell {
+  display: grid;
+  gap: 3.75rem;
+  grid-template-columns: 285px minmax(0, 1fr);
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 3.5rem 2.5rem 5rem;
+  width: 100%;
+}
+
+.profile {
+  align-self: start;
+  border-right: 1px solid var(--border);
+  padding-right: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.site-name {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 1.6rem;
+}
+
+.site-name a,
+.site-name a:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.sidebar-section {
+  border: 0;
+  float: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  width: auto;
+}
+
+.sidebar-heading,
+.section-heading {
+  border: 0;
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  margin: 0 0 0.65rem;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.sidebar-box {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--soft-border);
+  line-height: 1.58;
+  padding: 0.15rem 0 0.15rem 0.8rem;
+}
+
+.identity {
+  margin-top: 0;
+}
+
+.identity strong {
+  font-weight: 600;
+}
+
+.main-content {
+  float: none;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  width: auto;
+}
+
+.intro {
+  color: var(--muted);
+  margin: 0 0 1.8rem;
+  max-width: 68ch;
+}
+
+.research-section + .research-section {
+  margin-top: 2.75rem;
+}
+
+.research-section {
+  border: 0;
+  float: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.section-heading {
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.08rem;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  margin-bottom: 1.35rem;
+  padding-bottom: 0.6rem;
+  text-transform: none;
+}
+
+.publication {
+  border-left: 1px solid var(--soft-border);
+  margin: 0 0 1.65rem;
+  padding-left: 1rem;
+  transition: border-color 160ms ease;
+}
+
+.publication:hover {
+  border-left-color: var(--accent);
+}
+
+.publication-line {
+  max-width: 100ch;
+  text-align: left;
+}
+
+.paper-authors,
+.paper-year,
+.paper-title,
+.paper-venue {
+  margin-right: 0.2rem;
+}
+
+.paper-title {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.paper-venue {
+  font-style: italic;
+}
+
+.paper-links {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.015em;
+  margin-top: 0.3rem;
+}
+
+.paper-links span,
+.paper-links a,
+.publication-details summary {
+  margin-right: 0.2rem;
+}
+
+.paper-links a {
+  text-decoration: none;
+}
+
+.publication-details {
+  display: inline;
+}
+
+.publication-details summary {
+  cursor: pointer;
+  display: inline;
+  list-style: none;
+}
+
+.publication-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-details[open] {
+  display: block;
+  margin-top: 0.55rem;
+}
+
+.publication-abstract {
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 100ch;
+}
+
+.no-publications {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.acknowledgement {
+  border: 0;
+  float: none;
+  margin: 3rem 0 0;
+  padding: 0;
+  width: auto;
+}
+
+.acknowledgement p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 100ch;
+}
+
+a,
+a:visited {
+  color: var(--accent);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-deep);
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .site-shell {
+    display: block;
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .profile {
+    border-bottom: 1px solid var(--border);
+    border-right: 0;
+    margin-bottom: 2.25rem;
+    padding: 0 0 2rem;
+    position: static;
+  }
+
+  .sidebar-section {
+    margin: 1.1rem 0 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #d59aaa;
+    --accent-deep: #efbdc9;
+    --background: #202022;
+    --text: #eeeae2;
+    --muted: #b9b3aa;
+    --border: #4b4845;
+    --soft-border: #3b3937;
+  }
+}

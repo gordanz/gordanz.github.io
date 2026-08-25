@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description | escape }}">
+    <title>{% if page.title and page.title != "Home" %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="profile" aria-label="Profile and contact information">
+        <h1 class="site-name">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </h1>
+
+        <div class="sidebar-box identity">
+          <strong>{{ site.role }}</strong><br>
+          <a href="{{ site.department_url }}">{{ site.department }}</a><br>
+          <a href="{{ site.university_url }}">{{ site.university }}</a>
+        </div>
+
+        <section class="sidebar-section" aria-labelledby="contact-heading">
+          <h2 id="contact-heading" class="sidebar-heading">Contact</h2>
+          <div class="sidebar-box">
+            Office: {{ site.office }}<br>
+            Phone: {{ site.phone }}<br>
+            Fax: {{ site.fax }}<br>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </div>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="cv-heading">
+          <h2 id="cv-heading" class="sidebar-heading">Curriculum Vitae</h2>
+          <div class="sidebar-box">
+            <a href="{{ site.cv_url | relative_url }}">[pdf]</a>
+          </div>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="notes-heading">
+          <h2 id="notes-heading" class="sidebar-heading">Lecture Notes</h2>
+          <div class="sidebar-box">
+            All lecture notes are <a href="{{ site.lecture_notes_url }}">[here]</a>.
+          </div>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>
